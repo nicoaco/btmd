@@ -15,3 +15,7 @@ app.listen(3000, () => console.log('server running on port 3000'));
 app.use('/', rutasMain);
 app.use('/services', rutasServices);
 app.use('/blog', rutasBlog);
+
+app.use((req, res, next) => {
+    res.status(404).render(path.resolve(__dirname,'./views/notFound.ejs'));
+})

@@ -5,5 +5,6 @@ const blogController = require('../controllers/blogController');
 
 
 router.get('/', blogController.blog);
+router.get('/:id', (req,res) => res.send('Bienvenido al Blog. Recurso ' + req.params.id));
 
 module.exports = router;
