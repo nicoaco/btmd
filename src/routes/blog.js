@@ -5,7 +5,7 @@ const blogController = require('../controllers/blogController');
 
 //rutas del blog
 router.get('/', blogController.blog);
-router.get('/:id', (req,res) => res.send('Bienvenido al Blog. Recurso ' + req.params.id));
+router.get('/:id', blogController.detail );
 //router.get ("/:id", productController.detail);
 //router.get("/create", blogController.create);
 //router.get("/:id/edit", blogController.edit);

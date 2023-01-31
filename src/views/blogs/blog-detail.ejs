@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<%- include('../partials/head') %>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="/">Bitmode</a></h1>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Inicio</a></li>
+							<li><a href="/about">Nosotros</a></li>
+							<li><a href="/services">Servicios</a></li>
+							<li class="current"><a href="/blog">Blog</a></li>
+							<li><a href="/contact">Contacto</a></li>
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<a href="#" class="image featured"><img src="../images/<%- articulo.image %>" alt="" /></a>
+								<header>
+									<h2> <%- articulo.title %> </h2>
+									<p> creado: <%- articulo.created %> </p>
+								</header>
+								<p>
+									Resumen: <%- articulo.shortDescription %>.
+								</p>
+								
+								<section>
+									<header>
+										<h3>Something else</h3>
+									</header>
+									<p>
+										Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
+										placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
+										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
+										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+										sit amet nullam consequat feugiat dolore tempus.
+										Elementum odio duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis.
+										placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
+										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
+										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.
+									</p>
+									<p>
+										Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
+										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
+										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+										sit amet nullam consequat feugiat dolore tempus.
+									</p>
+								</section>
+								<section>
+									<header>
+										<h3>So in conclusion ...</h3>
+									</header>
+									<p>
+										Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc,
+										eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
+										elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+										sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla.
+										Maecenas sagittis convallis justo vel mattis.
+									</p>
+								</section>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<%- include('../partials/footer') %>
+
+		</div>
+
+	</body>
+</html>
