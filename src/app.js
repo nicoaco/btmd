@@ -9,7 +9,7 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 app.set('view engine', 'ejs');
 
 
-app.listen(3000, () => console.log('server running on port 3000'));
+app.listen(80, () => console.log('server running on port 3000'));
 
 
 app.use('/', rutasMain);
