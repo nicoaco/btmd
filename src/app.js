@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const fs = require('fs');
+const https = require('https');
 const rutasMain = require('./routes/main');
 const rutasServices = require('./routes/services');
 const rutasBlog = require('./routes/blog');
@@ -9,7 +11,13 @@ app.use(express.static(path.resolve(__dirname,'../public')));
 app.set('view engine', 'ejs');
 
 
-app.listen(80, () => console.log('server running on port 3000'));
+app.listen(80, () => console.log('server running on port 80'));
+https.createServer({
+    //cert: fs.readFileSync('/etc/letsencrypt/live/bitmode.ar/fullchain.pem'                                                                                                                                                             ),
+    //key: fs.readFileSync('/etc/letsencrypt/live/bitmode.ar/privkey.pem')
+  },app).listen(443, function(){
+     console.log('Servidor https correindo en el puerto 443');
+ });
 
 
 app.use('/', rutasMain);
