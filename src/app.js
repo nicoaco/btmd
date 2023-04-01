@@ -10,6 +10,16 @@ const rutasBlog = require('./routes/blog');
 app.use(express.static(path.resolve(__dirname,'../public')));
 app.set('view engine', 'ejs');
 
+app.enable('trust proxy')
+app.use(function(request, response, next) {
+
+    if (process.env.NODE_ENV != 'development' && !request.secure) {
+       return response.redirect("https://" + request.headers.host + request.url);
+    }
+
+    next();
+})
+
 
 app.listen(80, () => console.log('server running on port 80'));
 https.createServer({
